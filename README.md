@@ -1,3 +1,11 @@
+To compile and run the webpack build execute the following
+
+```bash
+npm i
+npm run compile
+npm test
+```
+
 When using the `webpack.config.js` without a target set we get the error:
 
 ```bash
@@ -62,6 +70,3 @@ and with `main.js` as
 var QueryEngineBase = require('@comunica/actor-init-query').QueryEngineBase;
 var engine = new QueryEngineBase(require('@comunica/query-sparql/engine-default'))
 ```
-
-
-
