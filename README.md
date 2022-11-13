@@ -70,3 +70,14 @@ and with `main.js` as
 var QueryEngineBase = require('@comunica/actor-init-query').QueryEngineBase;
 var engine = new QueryEngineBase(require('@comunica/query-sparql/engine-default'))
 ```
+
+I also tried adding the following to the loader rules
+
+```
+{
+  test: /\.jsonld/,
+  loader: 'json-loader'
+}
+```
+
+with no changes observed in results
