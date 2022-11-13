@@ -63,11 +63,19 @@ engine.queryBindings(`SELECT DISTINCT ?s WHERE { ?s ?p ?o FILTER(isIRI(?s)) }`, 
   .catch(err => { console.error(err) });
 ```
 
-and with `main.js` as
+with `main.js` as
 
 
 ```js
 var QueryEngineBase = require('@comunica/actor-init-query').QueryEngineBase;
+var engine = new QueryEngineBase(require('@comunica/query-sparql/engine-default'))
+```
+
+and with `main.js` as (to try and avoid the node version of ActorInitQuery)
+
+```js
+
+var QueryEngineBase = require('@comunica/actor-init-query/lib/ActorInitQuery-browser').ActorInitQuery;
 var engine = new QueryEngineBase(require('@comunica/query-sparql/engine-default'))
 ```
 
