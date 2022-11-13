@@ -81,3 +81,5 @@ I also tried adding the following to the loader rules
 ```
 
 with no changes observed in results
+
+I have also tried setting libraryTarget to `this` and similarly observed no change in results.
